@@ -24,7 +24,7 @@ main {
   overflow-y: hidden;
   /* padding-left: 15px;
   padding-right: 15px; */
-  padding: 10px 15px;
+  padding: 10px 20px;
 }
 #logo_spoty {
   margin-top: 15px;
@@ -116,6 +116,18 @@ main {
   background-color: #141922;
   overflow-y: scroll;
 }
+
+#fixed_upgrade_box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  height: 80px;
+  background-color: #080B12;
+  opacity: 0.4;
+}
+
 
 footer {
   width: 100%;
