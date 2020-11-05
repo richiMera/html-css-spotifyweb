@@ -14,7 +14,7 @@
 
       <main>
         <aside id="nav_box">
-          <div class="top_nav-container">
+          <div id="top_nav_container">
             <div id="logo_spoty">
               <a href="#">
                 <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="">
@@ -31,8 +31,12 @@
 
             <div id="playlist_nav_list">
               <h4>PLAYLIST</h4>
-              <ul class="my_nav_list">
-                <li><a href="#"><button id="plus_button" type="button" name="button"><i class="fas fa-plus"></i></button><span id="create_playlist">Create Playlist</span></a></li>
+
+              <div class="btn">
+                <a href="#"><button id="plus_button" type="button" name="button"><i class="fas fa-plus"></i></button><span id="create_playlist">Create Playlist</span></a>
+              </div>
+
+              <ul id="playlists" class="my_nav_list">
                 <li><a href="#">Nome Playlist</a></li>
                 <li><a href="#">Nome Playlist</a></li>
                 <li><a href="#">Nome Playlist</a></li>
@@ -146,6 +150,40 @@
       </main>
 
       <footer>
+        <div id="left_box">
+          <div class="figure_left_footer_box">
+            <figure>
+              <img id="daje" src="img/81mfiTrZsFL._SL1500_.jpg" alt="">
+            </figure>
+            <div class="fig_box">
+             <figcaption>Sinister</figcaption>
+             <figcaption>Brano Nome</figcaption>
+           </div>
+         </div>
+
+          <div id="heart_folder_icon_box">
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#"><i class="far fa-folder"></i></a>
+          </div>
+        </div>
+
+        <div id="mid_box">
+          <div id="mid_box_player_list">
+            <ul class="player_list">
+              <li><i class="fas fa-expand-arrows-alt"></i></li>
+              <li><i class="fas fa-arrow-circle-left"></i></li>
+              <li><i class="far fa-play-circle"></i></li>
+              <li><i class="fas fa-arrow-circle-right"></i></li>
+              <li><i class="fas fa-redo"></i></li>
+            </ul>
+          </div>
+
+          <div class="music_bar_box">
+
+          </div>
+        </div>
+
+
 
       </footer>
     </div>
