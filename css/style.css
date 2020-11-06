@@ -51,8 +51,8 @@ main {
 #playlist_nav_list {
   overflow: hidden;
 }
-#playlist_nav_list h4 {
-  font-size: 16px;
+#playlist_nav_list h2 {
+  font-size: 14px;
   color: white;
   padding-bottom: 10px;
   /* margin-left: 20px; */
@@ -63,13 +63,33 @@ main {
   margin-right: 10px;
   background-color: #A3A3A3;
 }
-.btn {
+#btn_plus_box {
   padding-bottom: 15px;
 }
-#plus_button i {
-  font-size: 25px;
-  color: #000000;
+#icon_plus_box {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: gray;
+  vertical-align: middle;
+  margin-right: 5px;
+  cursor: pointer;
 }
+#icon_plus_box:hover {
+  background-color: white;
+}
+#icon_plus_box i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+#playlist_nav_list #btn_plus_box #create_playlist {
+  font-size: 13px;
+}
+
 #playlist_nav_list a {
   font-size: 12px;
 }
@@ -78,7 +98,7 @@ main {
   cursor: pointer;
 }
 #home_nav_list .my_nav_list i {
-  font-size: 25px;
+  font-size: 20px;
   margin-right: 5px;
   vertical-align: middle;
 }
@@ -87,15 +107,15 @@ main {
   overflow: auto;
 }
 #create_playlist {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
 }
 .my_nav_list li {
   padding-bottom: 10px;
 }
 #nav_box a {
-  font-size: 13px;
-  color: #A3A3A3;
+  font-size: 11px;
+  color: gray;
   font-weight: 700;
   text-decoration: none;
 }
@@ -184,6 +204,7 @@ main {
   margin-top: 90px;
 }
 .flex_list {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,11 +216,19 @@ main {
 }
 .flex_list a {
   font-size: 13px;
+  font-weight: 700;
   text-decoration: none;
   color: #787A7F;
 }
+.flex_list a:hover {
+  color: white;
+}
+
 .class_active::after {
   content: "";
+  position: relative;
+  left: 26%;
+  display: block;
   width: 40px;
   height: 3px;
   background-color: green;
