@@ -140,9 +140,18 @@ main {
   background-color: #141922;
   overflow-y: scroll;
 }
-#content_box h2 {
+#content_box h2, h3 {
   font-weight: 700;
   color: white;
+}
+#content_box h3 {
+  font-size: 13px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+#content_box h4 {
+  font-size: 11px;
+  color: gray;
 }
 
 #fixed_upgrade_box {
@@ -189,37 +198,60 @@ main {
   color: #787A7F;
 }
 
+#recently_box {
+  width: 100%;
+}
 #recently_box h2 {
   padding: 30px 20px;
 }
 
-.albums_box {
+.albums_container {
   display: flex;
-  justify-content: space-around;
+  justify-content: row;
+  width: 100%;
+}
+.albums_box {
+  width: calc(100% / 6);
+  padding: 10px 15px;
+  text-align: center;
+}
+.albums_box img {
+  width: 100%;
+}
+.absolute_albums_box {
+  position: relative;
+  font-size: 0;
+}
+.absolute_album {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.albums_box i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: none; */
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+}
+.absolute_albums_box:hover .absolute_album {
+  display: inline-block;
 }
 
-figure {
-  width: 14%;
-}
-figure img {
+
+/* .player_container {
   width: 100%;
-  height: 155px;
-}
-figcaption {
-  text-align: center;
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-  margin-top: 10px;
-}
-.subtitle {
-  font-size: 12px;
-  color: gray;
-}
-.player_container {
+  height: 100%;
   position: relative;
 }
-figure a {
+.player_container a {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -239,11 +271,11 @@ figure a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+
 }
 .player_container:hover .absolute_container {
   display: inline-block;
-}
+} */
 
 
 
@@ -254,7 +286,7 @@ footer {
   height: 80px;
   background-color: #282828;
 }
-#left_box {
+/* #left_box {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -283,5 +315,20 @@ footer {
   align-items: center;
   width: 85%;
   height: 100%;
+
+} */
+
+@media screen and (max-width: 1199px) {
+
+
+}
+
+@media screen and (max-width: 991px) {
+
+
+}
+
+@media screen and (max-width: 767px) {
+
 
 }
