@@ -343,10 +343,52 @@ footer {
   background-color: #282828;
 }
 #footer_left_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 250px;
   height: 100%;
-  background-color: yellow;
+  padding-left: 10px;
 }
+#image_and_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#image_and_name img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+#song_name {
+  display: inline-block;
+}
+#song_name h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+#song_name a {
+  font-size: 11px;
+  font-weight: 700;
+  color: gray;
+  text-decoration: none;
+}
+#song_name a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+#hearth_folder i {
+  padding-right: 10px;
+  color: gray;
+}
+#hearth_folder i:hover {
+  color: white;
+}
+
+
+
 #footer_mid_box {
   width: 40%;
   height: 100%;
