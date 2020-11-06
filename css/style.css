@@ -44,8 +44,10 @@ main {
   margin-bottom: 15px;
 }
 .my_nav_list {
-  /* padding-left: 20px; */
   list-style: none;
+}
+#home_nav_list .my_nav_list .fa-spotify {
+  display: none;
 }
 
 #playlist_nav_list {
@@ -387,6 +389,12 @@ footer {
 
   #nav_box {
     width: 50px;
+    padding: 5px 0;
+
+  }
+
+  .my_nav_list {
+    text-align: center;
   }
 
   #content_box {
@@ -396,4 +404,26 @@ footer {
   #fixed_upgrade_box {
     width: calc(100% - 50px);
   }
+
+  #home_nav_list .my_nav_list .fa-spotify {
+    display: block;
+  }
+
+  #logo_spoty {
+    display: none;
+  }
+
+  #home_nav_list .my_nav_list span {
+    display: none;
+  }
+
+  #playlist_nav_list {
+    display: none;
+  }
+
+  #bottom_nav_box {
+    display: none;
+  }
+
+
 }
