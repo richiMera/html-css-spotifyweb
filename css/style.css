@@ -422,6 +422,16 @@ footer {
   }
 
   #bottom_nav_box {
+    text-align: center;
+  }
+  #bottom_nav_box i {
+    margin-right: 0;
+  }
+  #install_app {
+    border-bottom: none;
+  }
+
+  #bottom_nav_box span {
     display: none;
   }
 
