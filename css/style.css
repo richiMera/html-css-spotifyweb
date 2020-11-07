@@ -17,12 +17,12 @@ main {
   overflow: hidden;
 }
 #nav_box {
+  position: relative;
   width: 250px;
   height: 100%;
   background-color: #000000;
   overflow-y: hidden;
-  padding: 10px 20px;
-  min-height: 480px;
+  min-height: 350px;
 }
 
 #top_nav_container {
@@ -34,15 +34,20 @@ main {
 }
 #logo_spoty {
   margin-top: 15px;
-  margin-bottom: 25px;
+  padding-left: 15px;
 }
 #nav_box img {
   width: 130px;
 }
 
 #home_nav_list {
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+  padding-left: 0;
 }
+#home_nav_list a {
+  padding-left: 15px;
+}
+
 .my_nav_list {
   list-style: none;
 }
@@ -50,8 +55,23 @@ main {
   display: none;
 }
 
+.active {
+  position: relative;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  display: block;
+  width: 3px;
+  height: 20px;
+  background-color: green;
+}
+
 #playlist_nav_list {
   overflow: hidden;
+  padding-left: 15px;
 }
 #playlist_nav_list h2 {
   font-size: 14px;
@@ -105,7 +125,7 @@ main {
   vertical-align: middle;
 }
 #playlists {
-  /* height: 80%; */
+  height: 80%;
   overflow: auto;
 }
 #create_playlist {
@@ -128,10 +148,11 @@ main {
 #bottom_nav_box {
   width: 100%;
   height: 90px;
+  padding-left: 15px;
 }
 #install_app {
-  /* margin-right: 15px; */
-  padding: 15px 0;
+  margin-right: 15px;
+  padding: 10px 0;
   border-bottom: 1px solid #A3A3A3;
 }
 #bottom_nav_box i {
@@ -142,13 +163,14 @@ main {
   margin-top: 15px
 }
 #jhon_doe i {
-  font-size: 30px;
+  font-size: 25px;
   vertical-align: middle;
   color: gray;
 }
 #jhon_doe span {
-  color: white;
+  font-size: 12px;
   font-weight: 700;
+  color: white;
 }
 
 
@@ -199,8 +221,11 @@ main {
   border-radius: 30px;
   line-height: 40px;
   text-align: center;
+  transition: 0.4s ease;
 }
-
+#upgrade_button_box a:hover {
+  transform: scale(1.1);
+}
 
 #content_evidence_list {
   margin-top: 90px;
@@ -270,6 +295,8 @@ main {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
+}
+#popular_artist_box .absolute_albums_box .radious_absolute {
   border-radius: 100%;
 }
 .albums_box i {
@@ -302,38 +329,6 @@ main {
   border-radius: 100%;
 }
 
-/* .player_container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.player_container a {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  font-size: 50px;
-  color: white;
-  text-decoration: none;
-}
-.player_container:hover a {
-  display:inline-block;
-}
-.absolute_container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-
-}
-.player_container:hover .absolute_container {
-  display: inline-block;
-} */
-
-
 
 
 footer {
@@ -365,12 +360,12 @@ footer {
   display: inline-block;
 }
 #song_name h4 {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   color: white;
 }
 #song_name a {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: gray;
   text-decoration: none;
@@ -388,18 +383,25 @@ footer {
   color: white;
 }
 
-
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  cursor: pointer;
+}
 
 #footer_mid_box {
   width: 40%;
   height: 100%;
+  padding-top: 10px;
 }
 #player_footer_list {
   text-align: center;
 }
 #footer_inline_list li {
+  font-size: 15px;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 0 5px;
 }
 #footer_inline_list a {
   color: white;
@@ -407,53 +409,44 @@ footer {
 #footer_inline_list li:nth-child(3) {
   font-size: 25px;
   vertical-align: middle;
+  padding: 0 10px;
 }
 #player_bar_box {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  padding-top: 5px;
 }
 #player_bar_box span {
   font-size: 12px;
-  color: gray;
+  color: white;
+  padding: 0 10px;
 }
 #time_start {
   width: 10%;
-  text-align: center;
 }
 #player_bar_container {
-  width: 80%;
-  padding-top: 5px;
-}
-#player_bar {
-  width: 100%;
-  height: 3px;
-  background-color: white;
+  width: 90%;
 }
 #time_end {
   width: 10%;
-  text-align: center;
 }
 
 #footer_right_box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 250px;
   height: 100%;
 }
 #footer_right_audio {
-  width: 40%;
-  text-align: center;
+  width: 35%;
+  text-align: right;
 }
 #footer_right_bar {
   width: 60%;
   padding-right: 10px;
-}
-#audio_bar {
-  width: 100%;
-  height: 4px;
-  background-color: white;
 }
 .list_inline li {
   display: inline-block;
@@ -461,40 +454,10 @@ footer {
   padding-left: 10px;
 }
 .list_inline a {
-  font-size: 12px;
+  font-size: 10px;
   color: white;
 }
-/* #left_box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 15%;
-  height: 100%;
-}
-.figure_left_footer_box {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-}
-#daje {
-  width: 50px;
-  height: 50px;
-}
- .fig_box figcaption {
-  font-size: 10px;
-}
-#heart_folder_icon_box {
-  align-content: flex-end;
-}
 
-#mid_box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 85%;
-  height: 100%;
-
-} */
 
 @media screen and (max-width: 1199px) {
 
@@ -506,18 +469,63 @@ footer {
 
   .albums_box {
     width: calc(100% / 2);
+  }
+
+  #footer_left_box {
+    width: 200px;
+  }
+  #hearth_folder a {
+    display: block;
+    text-decoration: none;
+    padding-left: 0 15px;
+  }
+
+  #footer_mid_box {
+    width: 40%;
+  }
+  }
+  #player_bar_container {
+    width: 70%;
+    /* width: 50%; */
+  }
+  #player_bar_box {
+    padding-top: 10px;
+  }
+
+  #footer_right_box {
+    width: 200px;
+  }
+  #footer_right_audio {
+    width: 45%;
+  }
+  #footer_right_bar {
+    width: 50%;
+  }
+
 }
+
+
+
 
 @media screen and (max-width: 767px) {
 
   #nav_box {
     width: 50px;
-    padding: 5px 0;
-
-  }
-
-  .my_nav_list {
+    /* padding: 5px 0; */
+    padding-top: 10px;
+    padding-bottom: 0;
     text-align: center;
+  }
+  #nav_box a {
+    padding: 0;
+    margin: 0;
+  }
+  #nav_box .my_nav_list i {
+    padding: 0;
+    margin: 0;
+  }
+  .active::after {
+    display: none;
   }
 
   #content_box {
@@ -545,18 +553,49 @@ footer {
   }
 
   #bottom_nav_box {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
-  #bottom_nav_box i {
-    margin-right: 0;
-  }
+
   #install_app {
     border-bottom: none;
+    margin: auto;
+  }
+  #jhon_doe {
+    margin: auto;
   }
 
   #bottom_nav_box span {
     display: none;
   }
+
+  #footer_left_box {
+    width: 150px;
+  }
+  #image_and_name img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #hearth_folder i {
+    font-size: 12px;;
+  }
+  #footer_right_box {
+    width: 150px;
+  }
+  #footer_inline_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list_inline li {
+    padding-left: 5px;
+  }
+}
+
+@@media screen and (max-width: 500px;) {
+
 
 
 }
