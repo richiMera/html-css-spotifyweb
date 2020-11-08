@@ -12,7 +12,7 @@
 main {
   display: flex;
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100% - 90px);
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
 }
@@ -335,7 +335,7 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 80px;
+  height: 90px;
   background-color: #282828;
 }
 #footer_left_box {
@@ -403,9 +403,14 @@ footer {
   display: inline-block;
   padding: 0 5px;
 }
-#footer_inline_list a {
+#footer_inline_list i {
   color: white;
+  transition: 0.4s ease;
 }
+#footer_inline_list i:hover {
+  transform: scale(1.1);
+}
+
 #footer_inline_list li:nth-child(3) {
   font-size: 25px;
   vertical-align: middle;
@@ -580,6 +585,16 @@ footer {
   #hearth_folder i {
     font-size: 12px;;
   }
+  #footer_inline_list li {
+    font-size: 12px;
+ }
+ #footer_inline_list li:nth-child(3) {
+   font-size: 18px;
+ }
+ #player_bar_box span {
+   font-size: 8px;
+   padding: 0 5px;
+ }
   #footer_right_box {
     width: 150px;
   }
@@ -588,14 +603,58 @@ footer {
     justify-content: center;
     align-items: center;
   }
-
   .list_inline li {
     padding-left: 5px;
   }
+  .list_inline a {
+    font-size: 8px;
+    vertical-align: middle;
+  }
 }
 
-@@media screen and (max-width: 500px;) {
+@media screen and (max-width: 443px) {
 
+  main {
+    height: calc(100% - 130px);
+  }
 
+  footer {
+    position: relative;
+    display: flex;
+    height: 130px;
+  }
+  #footer_left_box {
+    width: 50%;
+    height: 50%;
+    align-self: flex-end;
+  }
+  #footer_mid_box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50%;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  }
+  #footer_inline_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer_inline_list li {
+    font-size: 15px;
+    padding: 0 20px;
+  }
+  #footer_inline_list li:nth-child(3) {
+    font-size: 25px;
+    padding: 0 10px;
+  }
+  #footer_right_box {
+    width: 50%;
+    height: 50%;
+    align-self: flex-end;
+  }
 
 }
